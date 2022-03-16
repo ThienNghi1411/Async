@@ -24,8 +24,8 @@ input.addEventListener('keydown',function(e)
     }
 })
 
- async function getWeather(search) {
-   await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=d78fd1588e1b7c0c2813576ba183a667`)
+  function getWeather(search) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=d78fd1588e1b7c0c2813576ba183a667`)
   .then(response => response.json())
   .then(data => {
     visibility.innerHTML = data.visibility + '(m)';
