@@ -12,6 +12,20 @@ var btnEurope = document.querySelector(".opt-Europe");
 var btnOceania = document.querySelector(".opt-Oceania");
 var btnAll = document.querySelector(".opt-All");
 var btns = document.querySelectorAll("button")
+// loader
+const loader = document.querySelector("#loading");
+// showing loading
+function displayLoading() {
+    loader.classList.add("display");
+    // to stop loading after some time
+    setTimeout(() => {
+        loader.classList.remove("display");
+    }, 5000);
+}
+
+function hideLoading() {
+    loader.classList.remove("display");
+}
 // Query Region
 const setActiveClass = (cls) => {
    btns.forEach( (btn) => {
@@ -73,6 +87,7 @@ const resetAfterChoice = () => {
 };
 
 const getRegionOrGetAll = (region) => {
+    displayLoading()
     resetAfterChoice();
     let url = "" ;
     if (region !== "All"){
@@ -83,6 +98,7 @@ const getRegionOrGetAll = (region) => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+        hideLoading();
       // sort A -> Z
       for (let i = 0; i < data.length; i++) {
         for (let j = i + 1; j < data.length; j++) {
