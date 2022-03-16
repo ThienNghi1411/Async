@@ -19,17 +19,17 @@ fetch("https://restcountries.com/v3.1/all")
         console.log(ele);
       //country
       let country = document.createElement("div");
-      country.classList.add("element", "ele-Country");
+      country.classList.add("element");
       country.innerText = ele.name.common;
       //capital
       let capital = document.createElement("div");
-      capital.classList.add("element", "ele-Capital");
+      capital.classList.add("element");
       capital.innerText = ele.capital;
       //flag
       let flag = document.createElement("div");
       let tmp = `            
       <div class="element img-cont">
-        <img src="${ele.flags.svg}" alt="" srcset="">
+        <img src="${ele.flags.png}" alt="" srcset="">
       </div>
       `;
       flag.innerHTML=tmp;
