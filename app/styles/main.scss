@@ -5,10 +5,7 @@
   box-sizing: border-box;
 }
 
-body
-{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./IMG/hot.png) no-repeat center/cover;
-}
+
 body.hot
 {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./IMG/hot.png) no-repeat center/cover;
@@ -16,6 +13,14 @@ body.hot
 body.cold
 {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(./IMG/cold.png) no-repeat center/cover;
+}
+.card.hot
+{
+  background: url(./IMG/hot.png) no-repeat center/cover;
+}
+.card.cold
+{
+  background: url(./IMG/cold.png) no-repeat center/cover;
 }
 
 @mixin column
@@ -38,7 +43,8 @@ body
   width: 350px;
   height: 600px;
   border-radius: 10px;
-  background: url(./IMG/hot.png) no-repeat center/cover;
+  background:  no-repeat center/cover;
+  transition: 0.5s;
   .card_search{
       display: flex;
       justify-content: center;

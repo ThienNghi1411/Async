@@ -40,19 +40,16 @@ input.addEventListener('keydown',function(e)
     date.innerHTML = new Date().toLocaleString()
     console.log(data);
     let a = Math.round(data.main.temp)
-    if(a > 30)
+    if(a > 20)
     {
-        body.classList.remove('cold');
-        body.classList.add('hot');
+        body.setAttribute('class','hot')
+        card.setAttribute('class','card hot')
         
     }
     if( a <20 )
     {
-        body.classList.remove('hot');
-        body.classList.add('cold');
-        
-            
-
+        body.setAttribute('class','cold')
+        card.setAttribute('class','card cold')
     }
   });
 }
