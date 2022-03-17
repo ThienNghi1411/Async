@@ -1,116 +1,119 @@
-* {
+$font-stack: "Poppins", sans-serif;
+$primary-color: #f9c77f;
+$text-color: #1d2d5a;
+
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.main {
-  width: 1200px;
-  height: auto;
-  margin: 0 auto;
-  display: flex;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  position: relative;
-}
-.header {
-  width: 1200px;
-  height: 150px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 40pX;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-  border-radius: 10px;
-}
-
-button {
-  height: 30px;
-  width: 100px;
-  border: none;
-  border-radius: 10px;
-  background-color: #ffd1dc;
-  transition: 0.2s all ease-out;
-  margin: 10px 20px 0px 0px;
-}
-
-button:hover {
-  transform: scale(1.1);
-  font-weight: bold;
-}
-
-.active {
-  transform: scale(1.1);
-  font-weight: bold;
-  background-color: #86A8E7;
-  color: white;
-}
-.name-col,
-.capital-col,
-.flag-col,
-.currency-col,
-.population-col,
-.index-col {
-  flex: 1;
-}
-
-.title-col,
-.element {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  text-align: center;
-}
-
-.title-col {
-  height: 80px;
-  background-color: #87cefa !important;
-}
-
-.element {
-  height: 100px;
 }
 
 img {
-  height: 90%;
-  width: 80%;
+  display: block;
+  max-width: 100%;
 }
 
-.index-col div:nth-child(odd),
-.capital-col div:nth-child(odd),
-.name-col div:nth-child(odd),
-.flag-col div:nth-child(odd),
-.currency-col div:nth-child(odd),
-.population-col div:nth-child(odd) {
-  background: #f0ffff;
+a {
+  text-decoration: none;
+  color: $text-color;
 }
 
-#loading {
-  width: 200px;
-  height: 200px;
-  border: 5px solid #f3f3f3;
-  border-top: 6px solid #87cefa;
-  border-radius: 100%;
-  position: absolute;
-  visibility: hidden;
-  left: 500px;
-  top: 200px;
-  animation: spin 1s infinite linear;
+a:hover {
+  text-decoration: none;
+  color: $text-color;
 }
-#loading.display {
-  visibility: visible;
+
+//
+body {
+  font-family: $font-stack;
+  font-weight: 600;
 }
-@keyframes spin {
-  from {
-      transform: rotate(0deg);
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 1000px;
+  font-family: $font-stack;
+  font-weight: 600;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1210px;
+  padding: 0 2rem;
+}
+
+.header {
+  padding-top: 4rem;
+  &__inner {
+    @include flex(center, space-between);
   }
-  to {
-      transform: rotate(360deg);
+  &__menu {
+    &-list {
+      @include flex(center);
+    }
+    &-item {
+      margin-left: 5rem;
+      &:last-child {
+        margin-left: 7rem;
+      }
+    }
+    &-link {
+      font-size: 1.6rem;
+
+      transition: color 0.25s linear, border 0.25s linear;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &__login {
+    padding: 1.5rem 2.5rem;
+    display: inline-block;
+    border: 1px solid currentColor;
+    border-radius: 2.5rem;
+  }
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $text-color;
+  &__text {
+    color: $primary-color;
+  }
+}
+
+.banner {
+  max-width: 1210px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  height: 550px;
+  border: 1px solid #000;
+  @include flex(center, center);
+  &__inner {
+    height: 260px;
+    width: 720px;
+    border: 1px solid #000;
+    text-align: center;
+    &-title {
+      font-size: 6.5rem;
+      margin-bottom: 3.5rem;
+    }
+    &-description {
+      font-size: 2.5rem;
+      font-weight: 200;
+      margin-bottom: 4rem;
+    }
   }
 }

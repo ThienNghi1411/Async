@@ -9,6 +9,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Async</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,200&display=swap"
+      rel="stylesheet"
+    />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/vendor.css -->
@@ -19,6 +25,7 @@
     />
     <!-- endbuild -->
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->
     <!-- build:js scripts/modernizr.js -->
@@ -26,37 +33,43 @@
     <!-- endbuild -->
   </head>
   <body>
-    <div class="header">
-      <h2 class="header-title">COUNTRIES</h2>
-      <div class="filter">
-        <button class="active opt-All">All</button> 
-        <button class=" opt-America">America</button> 
-        <button class=" opt-Asia">Asia</button> 
-        <button class=" opt-Europe">Europe</button> 
-        <button class=" opt-Africa">Arfica</button> 
-        <button class=" opt-Oceania">Oceania</button> 
-      </div>
-    </div>
-    <div class="main">
-      <div class="index-col">
-        <div class="title-col">Index</div>
-      </div>
-      <div class="name-col">
-        <div class="title-col">Name of Country</div>
-      </div>
-      <div class="capital-col">
-        <div class="title-col">Capital</div>
-      </div>
-      <div class="flag-col">
-        <div class="title-col">Flag</div>
-      </div>
-      <div class="currency-col">
-        <div class="title-col">Currency</div>
-      </div>
-      <div class="population-col">
-        <div class="title-col">Population</div>
-      </div>
-      <div id="loading"></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header__inner">
+          <a href="index.html" class="logo">
+            <span class="logo__text">Play</span>ground
+          </a>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Events</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Pricing</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Blog</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link header__login">Login</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="banner">
+        <div class="banner__inner">
+          <div class="banner__inner-title">The Kids playground</div>
+          <div class="banner__inner-description">
+            The playground , designed by nonprofit organization to be acessible
+            for all children
+          </div>
+          <div class="banner__inner-explore buttonBox">
+            <button class="buttonBox-btn">Explore</button>
+            <button class="buttonBox-btn">Buy Tickers</button>
+          </div>
+        </div>
+      </section>
     </div>
 
     <script>

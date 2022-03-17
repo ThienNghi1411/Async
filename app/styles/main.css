@@ -1,0 +1,83 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #1d2d5a;
+}
+
+.body {
+  font-family: "Poppins", sans-serif;
+  color: #1d2d5a;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 1000px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1210px;
+  padding: 0 2rem;
+}
+
+.header {
+  padding-top: 4rem;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.header__menu-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.header__menu-item {
+  margin-left: 5rem;
+}
+.header__menu-item:last-child {
+  margin-left: 7rem;
+}
+.header__menu-link {
+  font-size: 1.6rem;
+  color: #1d2d5a;
+  transition: color 0.25s linear, border 0.25s linear;
+}
+.header__menu-link:hover {
+  color: #f9c77f;
+}
+.header__login {
+  padding: 1.5rem 2.5rem;
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 2.5rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1d2d5a;
+}
+.logo__text {
+  color: #f9c77f;
+}
+
+/*# sourceMappingURL=main.css.map */
