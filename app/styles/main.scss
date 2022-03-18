@@ -1,6 +1,6 @@
 $font-stack: "Poppins", sans-serif;
 $primary-color: #f9c77f;
-$text-color: #1d2d5a;
+$text-color: #1f2d4b;
 
 @mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap) {
   display: flex;
@@ -42,7 +42,7 @@ body {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  height: 1000px;
+  height: auto;
   font-family: $font-stack;
   font-weight: 600;
 }
@@ -153,6 +153,379 @@ body {
       );
       border: none;
       box-shadow: $primary-color 0px 7px 29px 0px;
+    }
+  }
+}
+
+.feature {
+  height: 550px;
+  width: 1210px;
+
+  margin: 0 auto;
+  &__inner {
+    height: 465px;
+    width: 100%;
+
+    @include flex(flex-start, center);
+  }
+}
+
+.activity {
+  cursor: pointer;
+  flex: 1;
+  height: 365px;
+  border-radius: 50px;
+  &:nth-child(1) {
+    box-shadow: #fffbfd 0px 80px 50px 5px;
+  }
+  &:nth-child(2) {
+    box-shadow: #ffeeed 0px 80px 50px 5px;
+  }
+  &:nth-child(3) {
+    box-shadow: #f0f3ff 0px 80px 50px 5px;
+  }
+  &:nth-child(4) {
+    box-shadow: #fffaf0 0px 80px 50px 5px;
+  }
+  @include flex(center);
+  flex-direction: column;
+  &__inner {
+    width: 210px;
+    height: 100%;
+  }
+  &__pic {
+    height: 230px;
+    &-innerPic {
+      width: 100%;
+      height: 100%;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__Info {
+    height: 135px;
+    padding: 4rem 0px;
+    &-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 3rem;
+      transition: color 0.2s linear;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    &-readMore {
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
+  }
+}
+
+.introduce {
+  height: auto;
+  width: 1210px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  @include flex;
+  &__picCont {
+    flex: 1;
+    height: 100%;
+    &-pic {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__content {
+    flex: 1;
+    padding-left: 10rem;
+    padding-top: 8rem;
+    &-greeting {
+      font-size: 4.2rem;
+      line-height: 5rem;
+      margin-bottom: 4.5rem;
+    }
+    &-lorem {
+      font-size: 1.6rem;
+      font-weight: 200;
+      margin-bottom: 4.5rem;
+    }
+    &-subGreating {
+      width: 80%;
+      font-size: 1.6rem;
+      line-height: 30px;
+      text-decoration-line: underline;
+      text-underline-offset: 0.5em;
+      margin-bottom: 3rem;
+    }
+
+    &-btn {
+      margin-top: 20px;
+    }
+  }
+}
+
+.wrap {
+  margin-top: 150px;
+}
+
+.content2 {
+  padding: 9rem 10rem 0rem 0rem;
+  &__greeting {
+    width: 80%;
+  }
+  &__lorem {
+    width: 90%;
+  }
+  &__pointContent {
+    margin-bottom: 40px;
+    @include flex(center);
+    &-point {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100rem;
+      border: none;
+      margin-right: 1.8rem;
+    }
+    &-content {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.pointPink {
+  background-color: #ff6ae1;
+}
+
+.pointGreen {
+  background-color: #93fb3d;
+}
+
+.pointBlue {
+  background-color: #1dc0f4;
+}
+
+.pointRed {
+  background-color: #fe8a9d;
+}
+
+.content3 {
+  padding: 5rem 0rem 0rem 8rem;
+  &__greeting {
+    width: 50%;
+  }
+  &__lorem {
+    width: 80%;
+  }
+  &__strengthCont {
+    width: 370px;
+    height: 370px;
+
+    @include flex(flex-start, flex-start, wrap);
+    gap: 35px;
+  }
+}
+
+.strength {
+  width: 155px;
+  height: 175px;
+  &__icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 2rem;
+    &-pic {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 20px;
+  }
+  &__lorem {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+}
+
+.partner {
+  height: 300px;
+  width: 1210px;
+  padding: 0 2rem;
+  margin: 0 auto;
+
+  @include flex(center, center);
+  &__inner {
+    width: 840px;
+    height: 100%;
+
+    &-title {
+      text-align: center;
+      font-size: 3rem;
+      padding-bottom: 70px;
+      border-bottom: 1px solid currentColor;
+    }
+    &-img {
+      width: 100%;
+      height: 60px;
+
+      margin-top: 65px;
+      background-image: url("../images/partners.png");
+      background-size: cover;
+    }
+  }
+}
+
+.contact {
+  height: 450px;
+  width: 1210px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  &__inner {
+    @include flex(center, center);
+    flex-direction: column;
+    &-title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+    &-subTitle {
+      font-size: 2rem;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.pictureBox {
+  width: 100%;
+  @include flex(center, space-between);
+  gap: 30px;
+  &__picCont {
+    flex: 1;
+    height: 100%;
+    &-pic {
+      width: 100%;
+      height: 100%;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.subscribe {
+  height: 230px;
+  width: 1210px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  &__inner {
+    @include flex();
+    &-title {
+      flex: 1;
+      font-size: 3rem;
+    }
+  }
+}
+
+.contactUs {
+  flex: 1;
+
+  &__sendMail {
+    width: 100%;
+    height: 6rem;
+    background-color: #f2f1f6;
+    @include flex(center, space-between);
+    margin-bottom: 50px;
+    &-input {
+      width: 100%;
+      height: 100%;
+      outline: none;
+      border: none;
+      background-color: #f2f1f6;
+      padding: 25px;
+      font-size: 1.6rem;
+    }
+    &-subscribe {
+      padding: 25px;
+      font-size: 1.6rem;
+      transition: color 0.2s linear;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &__socialWeb {
+    padding: 0px 25px;
+    font-size: 2.5rem;
+
+    &-icon {
+      margin-right: 40px;
+      transition: color 0.2s linear;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.footer {
+  border-top: 5px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  height: 450px;
+  width: 1210px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  &__inner {
+    margin-top: 60px;
+    display: flex;
+    &-brand {
+      flex: 1;
+    }
+  }
+}
+
+.menuFooter {
+  flex: 1;
+  &__option {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    transition: color 0.2s linear;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.privacy {
+  height: 150px;
+  width: 1210px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+  &__inner {
+    @include flex(center, space-between);
+    font-size: 1.4rem;
+    font-weight: 200;
+    &-privacyCont {
+      &-privacy {
+        margin-right: 1.5rem;
+        transition: color 0.2s linear;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+      &-term {
+        transition: color 0.2s linear;
+        &:hover {
+          color: $primary-color;
+        }
+      }
     }
   }
 }
