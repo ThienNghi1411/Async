@@ -197,3 +197,7 @@ btnOceania.addEventListener("click", () => {
 
 // first load
 getRegionOrGetAll("All");
+
+
+
+

@@ -99,12 +99,12 @@ body {
   padding: 0 2rem;
   margin: 0 auto;
   height: 550px;
-  border: 1px solid #000;
+
   @include flex(center, center);
   &__inner {
     height: 260px;
     width: 720px;
-    border: 1px solid #000;
+
     text-align: center;
     &-title {
       font-size: 6.5rem;
@@ -114,6 +114,45 @@ body {
       font-size: 2.5rem;
       font-weight: 200;
       margin-bottom: 4rem;
+    }
+  }
+}
+
+.buttonBox {
+  width: 350px;
+
+  @include flex(center, space-between);
+  margin: 0 auto;
+  &__btn {
+    padding: 18px 35px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid currentColor;
+    font-weight: 600;
+    font-size: 1.6rem;
+    transition: color 0.5s linear;
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+    &:last-child {
+      background-image: linear-gradient(
+        to bottom,
+        #ffeb7b,
+        #ffeb7b,
+        #ffeb7b,
+        #ffeb7b,
+        #ffeb7b,
+        #ffe87b,
+        #ffe57b,
+        #ffe27b,
+        #ffdb7c,
+        #fdd47c,
+        #fccd7e,
+        #f9c77f
+      );
+      border: none;
+      box-shadow: $primary-color 0px 7px 29px 0px;
     }
   }
 }
